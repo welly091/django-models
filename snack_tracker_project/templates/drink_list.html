@@ -1,0 +1,11 @@
+{% extends "base.html"%}
+
+{% block title %}
+Lab27 Django Models
+{% endblock title %}
+
+{% block content %}
+    {% for drink in object_list %}
+        <p><a href="{% url 'showDetailDrink' drink.pk%}">Drink {{drink.name}} is liked by {{drink.purchaser}}</a></p>
+    {% endfor %}
+{% endblock content %}

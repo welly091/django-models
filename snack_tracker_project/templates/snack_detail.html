@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Lab27 Django Models- details
+{% endblock title %}
+
+{% block content %}
+    <a href="{% url 'showList' %}">Back</a>
+    <div>
+        <h2>{{ snack.name }}</h2>
+        <p>Purchaser: {{ snack.purchaser }}</p>
+        <p>Description: {{ snack.description }}</p>
+    </div>
+{% endblock content %}
